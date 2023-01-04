@@ -1,0 +1,40 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\Navigation;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+
+class NavigationSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        //
+        Navigation::create([
+            'name' => 'Konfigurasi',
+            'url' => 'konfiguirasi',
+            'icon' => 'ti-settings',
+            'main_menu' => null,
+        ]);
+
+        Navigation::create([
+            'name' => 'Roles',
+            'url' => 'konfiguirasi/roles',
+            'icon' => '',
+            'main_menu' => 1,
+        ]);
+
+        Navigation::create([
+            'name' => 'Permissions',
+            'url' => 'konfiguirasi/permissions',
+            'icon' => '',
+            'main_menu' => 1,
+        ]);
+    }
+}
